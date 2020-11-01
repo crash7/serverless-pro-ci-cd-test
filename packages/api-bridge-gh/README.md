@@ -28,3 +28,7 @@ curl http://localhost:4000/repos/crash7
   }
 ]
 ```
+
+## Running locally
+
+Execute: `yarn start --stage {stage} --region us-east-1`
