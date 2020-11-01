@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "standard",
+    "plugin:ramda/recommended",
+    "prettier/standard",
+    "plugin:prettier/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "plugins": ["ramda", "jsdoc", "sort-destructure-keys"],
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "no-extra-semi": 2,
+    "strict": ["error", "global"],
+    "sort-destructure-keys/sort-destructure-keys": 2
+  }
+}
