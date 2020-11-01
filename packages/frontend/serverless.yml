@@ -1,0 +1,14 @@
+org: crash7
+
+app: serverless-pro-ci-cd-test
+
+name: frontend
+
+component: website
+
+inputs:
+  region: 'us-east-2'
+  src:
+    src: ./src
+    hook: npm run build
+    dist: ./build
