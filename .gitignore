@@ -1,2 +1,5 @@
 # Node & NPM
 node_modules
+
+# MacStuff
+.DS_Store
