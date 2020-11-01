@@ -21,6 +21,8 @@ provider:
 functions:
   sample:
     handler: lambda.dummyHandler
+    environment:
+      GH_TOKEN: ${param:GH_TOKEN}
     events:
       - http:
           path: /
