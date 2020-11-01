@@ -1,29 +1,35 @@
+# Serverless Pro account information
 org: crash7
-
 app: serverless-pro-ci-cd-test
 
-service: api-bridge-gh
+service: ${file(./package.json):name}
 
 provider:
   name: aws
   runtime: nodejs12.x
-  # todo: parameter here
-  region: us-east-1
-  # todo: parameter here
-  stage: production
-  memorySize: 256
-  timeout: 30
+  region: ${opt:region}
+  stage: ${opt:stage}
   apiGateway:
     shouldStartNameWithService: true
   environment:
-    NODE_ENV: production
+    NODE_ENV: ${self:provider.stage}
 
 functions:
-  sample:
-    handler: lambda.dummyHandler
+  repositories:
+    handler: lambda.retrieveUserInfo
+    memorySize: 256
+    timeout: 29
     environment:
       GH_TOKEN: ${param:GH_TOKEN}
     events:
       - http:
-          path: /
+          path: /repos/{user}
           method: GET
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+    noPrependStageInUrl: true
+
+plugins:
+  - serverless-offline

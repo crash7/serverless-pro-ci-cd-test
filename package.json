@@ -9,6 +9,9 @@
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/api-bridge-gh/**"
     ]
   },
   "scripts": {},
