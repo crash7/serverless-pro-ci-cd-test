@@ -1,0 +1,27 @@
+org: crash7
+
+app: serverless-pro-ci-cd-test
+
+service: api-bridge-gh
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  # todo: parameter here
+  region: us-east-1
+  # todo: parameter here
+  stage: production
+  memorySize: 256
+  timeout: 30
+  apiGateway:
+    shouldStartNameWithService: true
+  environment:
+    NODE_ENV: production
+
+functions:
+  sample:
+    handler: lambda.dummyHandler
+    events:
+      - http:
+          path: /
+          method: GET
