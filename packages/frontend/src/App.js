@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Hi
+          Hi from CI/CD
         </p>
       </header>
     </div>
