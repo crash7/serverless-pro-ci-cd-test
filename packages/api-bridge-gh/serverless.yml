@@ -2,7 +2,7 @@
 org: crash7
 app: serverless-pro-ci-cd-test
 
-service: ${file(./package.json):name}
+service: api-bridge-gh
 
 provider:
   name: aws
