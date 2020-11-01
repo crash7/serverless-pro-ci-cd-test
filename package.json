@@ -1,0 +1,17 @@
+{
+  "name": "serverless-pro-ci-cd-test",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Christian Musa"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
