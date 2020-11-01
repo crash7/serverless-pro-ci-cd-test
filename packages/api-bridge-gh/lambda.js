@@ -1,6 +1,6 @@
 'use strict';
 
-function dummyHandler(event) {
+async function dummyHandler(event) {
   console.info('Event', event);
   console.info('Event', process.env);
   return {
